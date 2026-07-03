@@ -1,0 +1,21 @@
+#Basic numpy array operation:
+import numpy as np
+a = np.array([1, 2, 3,4,5,6])
+b = np.array([[4,5,6], [7, 8, 9]])
+zeros=np.zeros((3,3))
+ones=np.ones((3,3))
+identity=np.eye(6)
+lin=np.linspace(0,2,10)
+ar=np.arange(0,12,2)
+
+print(a) 
+print(b)
+print(zeros) 
+print(ones)
+print(identity)
+print(lin)
+print(ar)
+print(b.shape)
+print(b.ndim)
+print(b.size)
+print(a.dtype)
