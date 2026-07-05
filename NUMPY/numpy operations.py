@@ -1,0 +1,46 @@
+import numpy as np
+m1=np.array([[1,2],[4,5]])
+m2=np.array([[7,8],[2,4]])
+print(m1)
+print(m2)
+print('Dot product Matrix')
+print(np.dot(m1,m2))
+print(m1@m2)
+print('Transpose of matrix:')
+print(m1.T)
+print(m2.T)
+#Random Number using Numpy:
+print('Random number matrix:')
+np.random.seed(42)
+print(np.random.rand(2,3))
+print(np.random.randint(0,10,size=(3,3)))
+print(np.random.randn(2,3))
+#Stacking,Concatenation,Split:
+a1=np.array([1,2,3])
+a2=np.array([5,6,7])
+print('vertical Stacking:')
+print(np.vstack((a1,a2)))
+print('Horizontal Stacking:')
+print(np.hstack((a1,a2)))
+print('Concatenation:')
+print(np.concatenate((a1,a2)))
+print('Split:')
+print(np.split(np.arange(9),3))
+#Sorting,Argsort,Where:
+Unsorted=np.array([1,4,3,2,5,8,9,0])
+print('Sorting:')
+print(np.sort(Unsorted))
+print('Argsort:')
+print(np.argsort(Unsorted))#print index value.
+print('Where:')
+print(np.where(Unsorted>3))
+#Boolean Operations:
+data=np.array([20,40,80,90])
+mask=data>40
+print(mask)
+print(data[mask])
+#Save the data:
+print('save the data:')
+np.save('array_data.npy',data)
+loaded=np.load('array_data.npy')
+print(loaded)
